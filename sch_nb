@@ -1,0 +1,127 @@
+{
+  "paragraphs": [
+    {
+      "text": "%pyspark\nfrom pyspark.sql import HiveContext\n\nsqlsc \u003d HiveContext(sc)\n\nairline_query \u003d \"\"\"select itinid, origin, dest, year from default.default_qubole_airline_origin_destination\"\"\"\n#create df\ndf_query \u003d sqlsc.sql(airline_query)\n\ndf_query.head(10)\n#print(df_query.count())",
+      "user": "navdeepp@qubole.com",
+      "dateUpdated": "May 3, 2017 5:32:23 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "group": "spark",
+          "values": [
+            "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2Fec2-54-226-170-170.compute-1.amazonaws.com%3A8088%2Fproxy%2Fapplication_1493789090647_0003/jobs/job?spark\u003dtrue\u0026id\u003d5"
+          ],
+          "interpreterSettingId": "2CHRMT8A6289211493789086652"
+        }
+      },
+      "jobName": "paragraph_1493188478214_-589399078",
+      "id": "20170426-063438_1792687692",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Apr 26, 2017 6:34:38 AM",
+      "dateStarted": "May 3, 2017 5:32:23 AM",
+      "dateFinished": "May 3, 2017 5:32:24 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ndf_query.show()",
+      "user": "navdeepp@qubole.com",
+      "dateUpdated": "May 3, 2017 5:30:46 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "group": "spark",
+          "values": [
+            "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2Fec2-54-226-170-170.compute-1.amazonaws.com%3A8088%2Fproxy%2Fapplication_1493789090647_0003/jobs/job?spark\u003dtrue\u0026id\u003d2"
+          ],
+          "interpreterSettingId": "2CHRMT8A6289211493789086652"
+        }
+      },
+      "jobName": "paragraph_1493188890386_-889688754",
+      "id": "20170426-064130_708535942",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "+--------------+--------+------+------+\n|        itinid|  origin|  dest|  year|\n+--------------+--------+------+------+\n|      \"ItinID\"|\"Origin\"|\"Dest\"|\"Year\"|\n|\"200713540007\"|   \"IAH\"| \"CLT\"|  2007|\n|\"200713540007\"|   \"CLT\"| \"RIC\"|  2007|\n|\"200713540008\"|   \"RIC\"| \"PHL\"|  2007|\n|\"200713540008\"|   \"PHL\"| \"DFW\"|  2007|\n|\"200713540008\"|   \"DFW\"| \"LBB\"|  2007|\n|\"200713540008\"|   \"LBB\"| \"IAH\"|  2007|\n|\"200713540008\"|   \"IAH\"| \"RIC\"|  2007|\n|\"200713540009\"|   \"RIC\"| \"PHL\"|  2007|\n|\"200713540009\"|   \"PHL\"| \"DFW\"|  2007|\n|\"200713540009\"|   \"DFW\"| \"OKC\"|  2007|\n|\"200713540010\"|   \"RIC\"| \"PHL\"|  2007|\n|\"200713540010\"|   \"PHL\"| \"DFW\"|  2007|\n|\"200713540010\"|   \"DFW\"| \"PHL\"|  2007|\n|\"200713540010\"|   \"PHL\"| \"RIC\"|  2007|\n|\"200713540011\"|   \"RIC\"| \"PHL\"|  2007|\n|\"200713540011\"|   \"PHL\"| \"DFW\"|  2007|\n|\"200713540011\"|   \"DFW\"| \"PHL\"|  2007|\n|\"200713540011\"|   \"PHL\"| \"RIC\"|  2007|\n|\"200713540012\"|   \"RIC\"| \"PHL\"|  2007|\n+--------------+--------+------+------+\nonly showing top 20 rows\n\n"
+      },
+      "dateCreated": "Apr 26, 2017 6:41:30 AM",
+      "dateStarted": "May 3, 2017 5:30:46 AM",
+      "dateFinished": "May 3, 2017 5:30:46 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1493189337156_-1726197154",
+      "id": "20170426-064857_1489193722",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Apr 26, 2017 6:48:57 AM",
+      "dateStarted": "Apr 26, 2017 7:50:30 AM",
+      "dateFinished": "Apr 26, 2017 7:50:33 AM",
+      "status": "ABORT",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Scheduled_nb",
+  "id": "45RWX2VUD21493188476",
+  "angularObjects": {
+    "2CCAU7RVE289211489478198037": [],
+    "2CAJQBTAK289211489478198052": [],
+    "2CBNRT476289211489689587636": [],
+    "2CHRMT8A6289211493789086652": [],
+    "2CCGBEGPS289211489478198048": []
+  },
+  "config": {},
+  "info": {},
+  "source": "FCN"
+}
